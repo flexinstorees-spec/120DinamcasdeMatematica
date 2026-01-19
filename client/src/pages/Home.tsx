@@ -111,30 +111,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* What Children Learn Section */}
-        <section className="py-12 bg-gray-50 -mx-4 px-4 rounded-3xl my-8">
-          <h2 className="text-xl font-bold text-center mb-8 uppercase tracking-wide text-gray-800">
-            O QUE AS CRIANÇAS VÃO APRENDER
-          </h2>
-          
-          <div className="bg-white rounded-3xl p-8 shadow-sm text-center max-w-sm mx-auto">
-            <div className="w-32 h-32 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center overflow-hidden">
-               <img src={learnIcon} alt="Learning Icon" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4 font-display">
-              Compreensão e Leitura Fluente
-            </h3>
-            <div className="flex justify-between items-center absolute top-1/2 w-full left-0 px-2 pointer-events-none opacity-0">
-               {/* Decorative arrows mimicking the screenshot carousel look */}
-               <ChevronLeft className="w-8 h-8 text-gray-400" />
-               <ChevronRight className="w-8 h-8 text-gray-400" />
-            </div>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              Exercícios práticos que aprimoram a compreensão do que está sendo lido, ajudando seu filho a ganhar fluência e confiança.
-            </p>
-          </div>
-        </section>
-
         {/* Transformation Gallery */}
         <section className="py-12 text-center space-y-8">
           <h2 className="text-2xl font-bold text-gray-900 leading-snug">
