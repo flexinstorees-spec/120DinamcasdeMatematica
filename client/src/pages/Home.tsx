@@ -159,40 +159,6 @@ export default function Home() {
           </Button>
         </section>
 
-        {/* Process Steps */}
-        <section className="py-16 space-y-16">
-          <div className="text-center space-y-4 max-w-xs mx-auto">
-            <div className="w-20 h-20 mx-auto bg-yellow-100 rounded-2xl flex items-center justify-center border-2 border-black mb-6">
-              <Mail className="w-10 h-10 text-gray-900 stroke-[1.5]" />
-            </div>
-            <h3 className="text-xl font-bold text-brand-purple">Chega no seu email</h3>
-            <p className="text-gray-600">
-              Após a compra você recebe o acesso para baixar os materiais.
-            </p>
-          </div>
-
-          <div className="text-center space-y-4 max-w-xs mx-auto">
-            <div className="w-20 h-20 mx-auto bg-blue-100 rounded-2xl flex items-center justify-center border-2 border-black mb-6">
-              <Printer className="w-10 h-10 text-gray-900 stroke-[1.5]" />
-            </div>
-            <h3 className="text-xl font-bold text-brand-purple">Você imprime</h3>
-            <p className="text-gray-600">
-              Você pode imprimir quando quiser e quantas vezes desejar. É vitalício!
-            </p>
-          </div>
-
-          <div className="text-center space-y-4 max-w-xs mx-auto">
-             <div className="w-20 h-20 mx-auto bg-blue-100 rounded-2xl flex items-center justify-center border-2 border-black mb-6 relative">
-              <BookOpen className="w-10 h-10 text-gray-900 stroke-[1.5]" />
-              <div className="absolute inset-0 border-2 border-black rounded-2xl translate-x-1 translate-y-1 -z-10 bg-yellow-100"></div>
-            </div>
-            <h3 className="text-xl font-bold text-brand-purple">Realiza as atividades</h3>
-            <p className="text-gray-600">
-              Coloca em Prática Mãos à obra! Já pode começar a usar
-            </p>
-          </div>
-        </section>
-
         {/* Pricing Card */}
         <section className="py-8">
           <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden">
