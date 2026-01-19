@@ -239,6 +239,16 @@ export default function Home() {
               <span>👉</span> Comprar agora
             </Button>
           </div>
+
+          {/* Email Delivery Banner */}
+          <div className="mt-6 bg-white rounded-2xl border-2 border-brand-green p-4 flex items-center gap-4 shadow-sm max-w-sm mx-auto">
+            <div className="bg-brand-green rounded-full p-2 shrink-0">
+              <Mail className="w-6 h-6 text-white" />
+            </div>
+            <p className="text-gray-900 font-bold text-sm leading-snug">
+              Após a compra, você recebe acesso ao Material em PDF diretamente no seu E-mail
+            </p>
+          </div>
         </section>
 
         {/* Testimonials Section */}
