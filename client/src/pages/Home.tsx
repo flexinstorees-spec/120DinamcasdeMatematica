@@ -227,10 +227,10 @@ export default function Home() {
                 "Acesso Imediato"
               ].map((benefit, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <div className="bg-brand-green rounded-full p-1">
-                    <CheckCircle2 className="w-4 h-4 text-white" />
+                  <div className="bg-brand-green rounded-full p-1.5 shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-white" />
                   </div>
-                  <span className="font-medium text-sm text-left">{benefit}</span>
+                  <span className="font-bold text-base text-left uppercase tracking-tight text-gray-900 leading-tight">{benefit}</span>
                 </div>
               ))}
             </div>
