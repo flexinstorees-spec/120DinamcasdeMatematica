@@ -271,10 +271,10 @@ export default function Home() {
 
               <AccordionItem value="item-3" className="border-none">
                 <AccordionTrigger className="hover:no-underline py-4 px-2 text-left font-medium text-gray-800 [&[data-state=open]]:text-brand-green">
-                  São quantas palavras?
+                  São quantos moldes?
                 </AccordionTrigger>
                 <AccordionContent className="px-2 text-gray-600">
-                  O kit contém centenas de moldes e palavras para formar diversas combinações educativas.
+                  O kit contém mais de 5.000 moldes variados para diversas ocasiões e atividades.
                 </AccordionContent>
               </AccordionItem>
 
