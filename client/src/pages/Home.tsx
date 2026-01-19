@@ -413,20 +413,20 @@ export default function Home() {
 
       {/* Social Proof Notification */}
       <div 
-        className={`fixed bottom-6 left-6 z-50 transition-all duration-500 transform ${
-          showNotification ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0 pointer-events-none"
+        className={`fixed bottom-4 left-4 z-50 transition-all duration-500 transform ${
+          showNotification ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0 pointer-events-none"
         }`}
       >
-        <div className="bg-[#4CAF50] text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-4 min-w-[280px]">
-          <div className="bg-white/20 rounded-full p-2.5">
-            <Check className="w-6 h-6 text-white" />
+        <div className="bg-[#4CAF50] text-white px-4 py-2.5 rounded-lg shadow-xl flex items-center gap-3 max-w-[240px]">
+          <div className="bg-white/20 rounded-full p-1.5 shrink-0">
+            <Check className="w-4 h-4 text-white" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-bold text-lg leading-tight">
-              {currentNotification.name} acabou de comprar
+          <div className="flex flex-col min-w-0">
+            <span className="font-bold text-sm leading-tight truncate">
+              {currentNotification.name} comprou agora
             </span>
-            <span className="text-white/90 text-sm">
-              5.000 Moldes de EVA
+            <span className="text-white/80 text-[10px] uppercase tracking-wider font-medium">
+              Acesso Liberado
             </span>
           </div>
         </div>
