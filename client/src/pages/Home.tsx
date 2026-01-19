@@ -197,15 +197,11 @@ export default function Home() {
           <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden">
             {/* Logo Placeholder */}
             <div className="text-center mb-6">
-              <div className="inline-block relative">
-                 <h2 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-purple-400 to-yellow-400 font-display drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] stroke-black" style={{WebkitTextStroke: "1px black"}}>
-                  PALAVRA
-                  <br />
-                  MÁGICA
-                </h2>
-                <div className="absolute -top-2 -right-4 text-yellow-400 text-xl">✦</div>
-                <div className="absolute -bottom-2 -left-4 text-yellow-400 text-xl">✦</div>
-              </div>
+              <img 
+                src="https://imgur.com/4maud8T.png" 
+                alt="Logo Palavra Mágica" 
+                className="mx-auto w-full max-w-[240px] h-auto object-contain"
+              />
             </div>
 
             <h3 className="text-xl font-bold text-center mb-4">
