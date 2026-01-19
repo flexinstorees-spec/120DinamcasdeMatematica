@@ -159,6 +159,66 @@ export default function Home() {
           </Button>
         </section>
 
+        {/* Exclusive Bonuses Section */}
+        <section className="py-12 space-y-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 font-display">
+            Bônus Exclusivos Para Você
+          </h2>
+          <div className="grid gap-8">
+            {[
+              {
+                name: "Certificado de Conclusão",
+                desc: "Certificado digital para valorizar seu aprendizado e comprovar a conclusão do material.",
+                img: "https://imgur.com/4fdkVdn.png",
+                price: "R$ 47,00"
+              },
+              {
+                name: "+2.500 Moldes de Feltro",
+                desc: "Uma coleção extra de moldes prontos para criar peças em feltro com mais variedade e criatividade.",
+                img: "https://imgur.com/x0PYYoQ.png",
+                price: "R$ 67,00"
+              },
+              {
+                name: "Lista de Fornecedores Baratos",
+                desc: "Indicações de fornecedores com bom custo-benefício para comprar materiais e economizar no dia a dia.",
+                img: "https://imgur.com/Vz1hwB6.png",
+                price: "R$ 27,00"
+              },
+              {
+                name: "Painéis Educativos para Sala de Aula",
+                desc: "Ideias prontas de painéis educativos para decorar e apoiar o aprendizado em sala.",
+                img: "https://imgur.com/1JgtLqr.png",
+                price: "R$ 37,00"
+              },
+              {
+                name: "+100 Livros de Colorir",
+                desc: "+100 livros de colorir para crianças, ideais para atividades educativas e coordenação motora.",
+                img: "https://imgur.com/ZKnnRYo.png",
+                price: "R$ 19,00"
+              }
+            ].map((bonus, i) => (
+              <div key={i} className="bg-white rounded-3xl border-2 border-gray-100 p-6 shadow-sm hover:shadow-md transition-all relative overflow-hidden group">
+                <div className="absolute top-4 right-4 bg-brand-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-10 animate-pulse">
+                  Grátis
+                </div>
+                <div className="flex flex-col md:flex-row gap-6 items-center">
+                  <div className="w-full md:w-1/3 aspect-video md:aspect-square rounded-2xl overflow-hidden border border-gray-100 bg-gray-50">
+                    <img src={bonus.img} alt={bonus.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                  </div>
+                  <div className="flex-1 space-y-2 text-center md:text-left">
+                    <h3 className="text-xl font-bold text-gray-900">{bonus.name}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{bonus.desc}</p>
+                    <div className="pt-2">
+                      <span className="text-gray-400 line-through text-sm">Valor Original: {bonus.price}</span>
+                      <p className="text-brand-green font-bold">Hoje: R$ 0,00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Pricing Card */}
         <section className="py-8">
           <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden">
