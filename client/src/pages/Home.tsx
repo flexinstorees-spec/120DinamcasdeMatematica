@@ -126,15 +126,10 @@ export default function Home() {
                 <iframe 
                   frameBorder="0" 
                   allowFullScreen 
-                  src="about:blank" 
+                  src="https://scripts.converteai.net/b3d1a520-ab98-4a63-bc66-0b40a4eb3ecb/players/696e608110d72bdc9f369c5a/v4/embed.html"
                   id="ifr_696e608110d72bdc9f369c5a" 
                   style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} 
-                  referrerPolicy="origin" 
-                  onLoad={(e) => {
-                    const iframe = e.currentTarget;
-                    iframe.onload = null;
-                    iframe.src = 'https://scripts.converteai.net/b3d1a520-ab98-4a63-bc66-0b40a4eb3ecb/players/696e608110d72bdc9f369c5a/v4/embed.html' + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
-                  }}
+                  referrerPolicy="origin"
                 ></iframe>
               </div>
             </div>
