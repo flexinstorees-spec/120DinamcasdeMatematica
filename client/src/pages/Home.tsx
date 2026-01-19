@@ -182,7 +182,7 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-gray-900">{bonus.name}</h3>
                     <p className="text-gray-600 text-sm leading-relaxed max-w-sm mx-auto">{bonus.desc}</p>
                     <div className="pt-2">
-                      <span className="text-gray-400 line-through text-sm">Valor Original: {bonus.price}</span>
+                      <span className="text-red-500 line-through text-sm">Valor Original: {bonus.price}</span>
                       <p className="text-brand-green font-bold">Hoje: R$ 0,00</p>
                     </div>
                   </div>
