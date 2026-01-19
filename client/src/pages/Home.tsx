@@ -161,9 +161,14 @@ export default function Home() {
 
         {/* Exclusive Bonuses Section */}
         <section className="py-12 space-y-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 font-display">
-            Bônus Exclusivos Para Você
-          </h2>
+          <div className="text-center space-y-2">
+            <h2 className="text-3xl font-bold text-gray-900 font-display">
+              Bônus Exclusivos Para Você
+            </h2>
+            <p className="text-brand-green font-medium">
+              E ainda você recebe 5 Bônus Grátis
+            </p>
+          </div>
           <div className="grid gap-8">
             {[
               {
