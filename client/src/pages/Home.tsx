@@ -309,12 +309,12 @@ export default function Home() {
                Precisa de Ajuda?
              </div>
              <p className="text-gray-600 max-w-sm mx-auto text-sm leading-relaxed px-4">
-               Envie um e-mail para <span className="font-semibold text-gray-900">DigitalKids@gmail.com</span> e nossa equipe responderá rapidamente para ajudá-lo com qualquer dúvida ou problema.
+               Envie um e-mail para <span className="font-semibold text-gray-900">moldeseva.suporte@gmail.com</span> e nossa equipe responderá rapidamente para ajudá-lo com qualquer dúvida ou problema.
              </p>
            </div>
 
            <div className="text-xs text-gray-400 max-w-md mx-auto px-6 leading-relaxed">
-             Na DigitalKids, desenvolvemos materiais educativos que incentivam o aprendizado infantil de forma lúdica e envolvente. Nosso compromisso é garantir qualidade e inovação no ensino, ajudando as crianças a aprenderem de maneira eficaz e divertida.
+             Na nossa plataforma, desenvolvemos moldes de EVA que incentivam o artesanato e a decoração de forma lúdica e envolvente. Nosso compromisso é garantir qualidade e inovação, ajudando artesãos e professores a criarem de maneira eficaz e divertida.
            </div>
         </footer>
       </div>
