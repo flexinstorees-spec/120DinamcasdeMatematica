@@ -2,8 +2,8 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Fredoka', sans-serif;
+  --font-sans: 'Poppins', sans-serif;
+  --font-display: 'Poppins', sans-serif;
 
   --color-brand-red: #E53935;
   --color-brand-yellow: #FFF176;
