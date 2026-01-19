@@ -111,54 +111,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Transformation Gallery */}
-        <section className="py-12 text-center space-y-8">
-          <h2 className="text-2xl font-bold text-gray-900 leading-snug">
-            Veja como o material transforma a sala de aula <span className="text-yellow-400 text-3xl align-middle">⭐</span>
-          </h2>
-
-          <div className="relative max-w-sm mx-auto">
-            <div className="overflow-hidden rounded-2xl shadow-lg" ref={emblaRef}>
-              <div className="flex">
-                {[slide1, slide2, slide3].map((src, index) => (
-                  <div className="flex-[0_0_100%] min-w-0" key={index}>
-                    <div className="relative aspect-[3/4]">
-                      <img 
-                        src={src} 
-                        alt={`Slide ${index + 1}`} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <button 
-              onClick={scrollPrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button 
-              onClick={scrollNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-colors"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-            
-            {/* Dots indicator mimicking screenshot */}
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-white"></div>
-              <div className="w-2 h-2 rounded-full bg-white/50"></div>
-            </div>
-          </div>
-
-          <Button className="w-full max-w-sm bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-lg hover:shadow-xl transition-all uppercase tracking-wide">
-            QUERO ESSA ATIVIDADE
-          </Button>
-        </section>
-
         {/* Exclusive Bonuses Section */}
         <section className="py-12 space-y-8">
           <div className="text-center">
