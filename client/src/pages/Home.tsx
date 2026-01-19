@@ -131,9 +131,9 @@ export default function Home() {
           <div className="pt-4">
             <Button 
               onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-xl py-8 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-3 uppercase tracking-tight"
+              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2 uppercase tracking-tight px-4 leading-tight"
             >
-              <span>👉</span> Quero meus 5.000 Moldes
+              <span className="shrink-0">👉</span> <span>Quero meus 5.000 Moldes</span>
             </Button>
           </div>
         </header>
@@ -409,9 +409,9 @@ export default function Home() {
           <div className="mt-10">
             <Button 
               onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-xl py-8 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-3 uppercase tracking-tight"
+              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2 uppercase tracking-tight px-4 leading-tight"
             >
-              <span>👉</span> Quero aproveitar a oferta agora
+              <span className="shrink-0">👉</span> <span>Quero aproveitar a oferta agora</span>
             </Button>
           </div>
         </section>
