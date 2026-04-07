@@ -158,7 +158,7 @@ export default function Home() {
               onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
               className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2 uppercase tracking-tight px-4 leading-tight"
             >
-              <span className="shrink-0">👉</span> <span>Quero meus 5.000 Moldes</span>
+              <span className="shrink-0">👉</span> <span>Quero minhs 120 dinâmicas</span>
             </Button>
           </div>
         </header>
