@@ -275,7 +275,7 @@ export default function Home() {
                     Grátis
                   </div>
                   <div className="space-y-6">
-                    <div className="mx-auto flex h-28 w-28 items-center justify-center overflow-hidden rounded-[2rem] border border-brand-green/15 bg-gradient-to-br from-white via-green-50 to-emerald-100 shadow-sm group-hover:scale-105 transition-transform">
+                    <div className={`mx-auto flex items-center justify-center overflow-hidden border border-brand-green/15 bg-gradient-to-br from-white via-green-50 to-emerald-100 shadow-sm group-hover:scale-105 transition-transform ${bonus.image ? "h-40 w-40 rounded-[2.25rem]" : "h-28 w-28 rounded-[2rem]"}`}>
                       {bonus.image ? (
                         <img
                           src={bonus.image}
