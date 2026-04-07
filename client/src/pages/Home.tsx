@@ -12,7 +12,6 @@ import {
   Check,
   Gift,
   Music4,
-  Trophy,
   Gamepad2
 } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
@@ -31,6 +30,7 @@ import slide2 from "@assets/stock_images/kids_in_classroom_le_23e6cce6.jpg";
 import slide3 from "@assets/stock_images/kids_in_classroom_le_d60b13fe.jpg";
 import learnIcon from "@assets/stock_images/happy_child_holding__5bdc9d4e.jpg";
 import certificateBonusImage from "@assets/E47E3840-DF10-4D9D-854A-6BCDDB3D0A9E_1775585886752.png";
+import bingoBonusImage from "@assets/BAA61E29-7C63-4B41-AE4D-98561B652FBD_1775586050292.png";
 import unoBonusImage from "@assets/IMG_1161_1775585600425.png";
 
 export default function Home() {
@@ -254,9 +254,7 @@ export default function Home() {
                 name: "Super Bingo Matemático para Sala de Aula",
                 desc: "Uma dinâmica pronta e divertida para ensinar números e envolver toda a turma de forma leve e interativa.",
                 price: "R$ 37,00",
-                icon: Trophy,
-                iconBg: "bg-blue-100",
-                iconColor: "text-blue-600"
+                image: bingoBonusImage
               },
               {
                 name: "Desafio Uno Matemático",
