@@ -128,7 +128,7 @@ export default function Home() {
         {/* Hero Section */}
         <header className="py-8 text-center space-y-4">
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight" data-testid="text-headline">
-            <span style={{ color: "#1d5336" }}>+120 Dinâmicas de Matemática</span>{" "}
+            <span className="font-black" style={{ color: "#1d5336" }}>+120 Dinâmicas de Matemática</span>{" "}
             Prontas para Imprimir
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed" data-testid="text-subheadline">
