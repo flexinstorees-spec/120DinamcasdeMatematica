@@ -10,7 +10,6 @@ import {
   ChevronDown,
   Star,
   Check,
-  Music4,
   Gamepad2
 } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
@@ -30,6 +29,7 @@ import slide3 from "@assets/stock_images/kids_in_classroom_le_d60b13fe.jpg";
 import learnIcon from "@assets/stock_images/happy_child_holding__5bdc9d4e.jpg";
 import certificateBonusImage from "@assets/Baixe_agora_um_material_com_1775600312810.png";
 import rewardBonusImage from "@assets/Sistema_de_recompensas_escolar_alegre_1775600178008.png";
+import musicBonusImage from "@assets/Músicas_Matemáticas_para_aprender_brincando_1775600424569.png";
 import bingoBonusImage from "@assets/BAA61E29-7C63-4B41-AE4D-98561B652FBD_1775586050292.png";
 import unoBonusImage from "@assets/IMG_1161_1775585600425.png";
 
@@ -244,9 +244,7 @@ export default function Home() {
                 name: "Músicas Matemáticas para Aprender Brincando",
                 desc: "Áudios educativos para ensinar números e manter a turma envolvida durante as aulas.",
                 price: "R$ 27,00",
-                icon: Music4,
-                iconBg: "bg-pink-100",
-                iconColor: "text-pink-600"
+                image: musicBonusImage
               },
               {
                 name: "Super Bingo Matemático para Sala de Aula",
