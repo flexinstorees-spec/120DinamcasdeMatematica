@@ -341,17 +341,16 @@ export default function Home() {
             </div>
 
             <div className="mb-8 space-y-4 border-t border-dashed border-brand-green/30 pt-6">
-              <p className="text-center text-sm font-semibold uppercase tracking-[0.18em] text-brand-green">E ainda:</p>
               {[
                 "Suporte 24/7",
                 "Garantia de 7 Dias",
                 "Acesso Imediato após a compra"
               ].map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="bg-green-100 rounded-full p-1.5 shrink-0 mt-0.5">
-                    <Check className="w-5 h-5 text-brand-green" />
+                  <div className="bg-brand-green rounded-full p-1.5 shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5 text-white" />
                   </div>
-                  <span className="font-semibold text-base text-left text-gray-800 leading-tight">{benefit}</span>
+                  <span className="font-bold text-base text-left tracking-tight text-gray-900 leading-tight">{benefit}</span>
                 </div>
               ))}
             </div>
