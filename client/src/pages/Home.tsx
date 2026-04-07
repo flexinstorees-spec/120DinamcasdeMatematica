@@ -31,6 +31,7 @@ import slide1 from "@assets/stock_images/kids_in_classroom_le_b8e756c7.jpg";
 import slide2 from "@assets/stock_images/kids_in_classroom_le_23e6cce6.jpg";
 import slide3 from "@assets/stock_images/kids_in_classroom_le_d60b13fe.jpg";
 import learnIcon from "@assets/stock_images/happy_child_holding__5bdc9d4e.jpg";
+import offerLogo from "@assets/image_1775568962662.png";
 
 export default function Home() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -302,7 +303,7 @@ export default function Home() {
             {/* Logo Placeholder */}
             <div className="text-center mb-6">
               <img 
-                src="https://imgur.com/QZyzJN2.png" 
+                src={offerLogo} 
                 alt="Logo Palavra Mágica" 
                 className="mx-auto w-full max-w-[240px] h-auto object-contain"
               />
