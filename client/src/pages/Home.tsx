@@ -10,7 +10,6 @@ import {
   ChevronDown,
   Star,
   Check,
-  Gift,
   Music4,
   Gamepad2
 } from "lucide-react";
@@ -30,6 +29,7 @@ import slide2 from "@assets/stock_images/kids_in_classroom_le_23e6cce6.jpg";
 import slide3 from "@assets/stock_images/kids_in_classroom_le_d60b13fe.jpg";
 import learnIcon from "@assets/stock_images/happy_child_holding__5bdc9d4e.jpg";
 import certificateBonusImage from "@assets/E47E3840-DF10-4D9D-854A-6BCDDB3D0A9E_1775585886752.png";
+import rewardBonusImage from "@assets/Sistema_de_recompensas_escolar_alegre_1775600178008.png";
 import bingoBonusImage from "@assets/BAA61E29-7C63-4B41-AE4D-98561B652FBD_1775586050292.png";
 import unoBonusImage from "@assets/IMG_1161_1775585600425.png";
 
@@ -238,9 +238,7 @@ export default function Home() {
                 name: "Sistema de Recompensas para Sala de Aula",
                 desc: "Cartões e incentivos simples para aumentar o engajamento e participação dos alunos.",
                 price: "R$ 67,00",
-                icon: Gift,
-                iconBg: "bg-yellow-100",
-                iconColor: "text-yellow-600"
+                image: rewardBonusImage
               },
               {
                 name: "Músicas Matemáticas para Aprender Brincando",
