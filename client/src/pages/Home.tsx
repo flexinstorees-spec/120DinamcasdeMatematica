@@ -416,7 +416,7 @@ export default function Home() {
 
         {/* FAQ */}
         <section className="py-12">
-          <h2 className="text-2xl font-black text-center mb-8">Perguntas Frequentes</h2>
+          <h2 className="text-2xl font-black text-center mb-8" data-testid="text-faq-heading">Perguntas Frequentes</h2>
           <div className="bg-gray-50 rounded-3xl p-6 shadow-sm">
             <Accordion type="single" collapsible className="w-full space-y-4">
               <AccordionItem value="item-1" className="border-none">
@@ -424,76 +424,109 @@ export default function Home() {
                   Como vou receber o material?
                 </AccordionTrigger>
                 <AccordionContent className="px-2 text-gray-600">
-                  O acesso é enviado para o seu e-mail cadastrado logo após a confirmação do pagamento.
+                  O acesso é enviado automaticamente para o seu e-mail logo após a confirmação do pagamento.
                 </AccordionContent>
               </AccordionItem>
-              
+
               <AccordionItem value="item-2" className="border-none">
                 <AccordionTrigger className="hover:no-underline py-4 px-2 text-left font-medium text-gray-800 [&[data-state=open]]:text-brand-green">
-                  Preciso de impressora?
+                  O material é físico ou digital?
                 </AccordionTrigger>
                 <AccordionContent className="px-2 text-gray-600">
-                  Não é obrigatório ter impressora em casa. Você pode imprimir em uma papelaria ou lan house, pois os arquivos estão em PDF prontos para impressão.
+                  O material é 100% digital. Você poderá acessar e baixar tudo imediatamente após a compra.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3" className="border-none">
                 <AccordionTrigger className="hover:no-underline py-4 px-2 text-left font-medium text-gray-800 [&[data-state=open]]:text-brand-green">
-                  São quantos moldes?
+                  Preciso imprimir as atividades?
                 </AccordionTrigger>
                 <AccordionContent className="px-2 text-gray-600">
-                  O kit contém mais de 5.000 moldes variados para diversas ocasiões e atividades.
+                  Sim. As dinâmicas são prontas para imprimir e aplicar em sala de aula.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border-none">
+                <AccordionTrigger className="hover:no-underline py-4 px-2 text-left font-medium text-gray-800 [&[data-state=open]]:text-brand-green">
+                  Para qual idade é indicado?
+                </AccordionTrigger>
+                <AccordionContent className="px-2 text-gray-600">
+                  O material foi desenvolvido para educação infantil, especialmente para crianças de 3 a 6 anos.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5" className="border-none">
                 <AccordionTrigger className="hover:no-underline py-4 px-2 text-left font-medium text-gray-800 [&[data-state=open]]:text-brand-green">
-                  Quais formas de pagamento são aceitas?
+                  As atividades são difíceis de aplicar?
                 </AccordionTrigger>
                 <AccordionContent className="px-2 text-gray-600">
-                  Aceitamos PIX e cartão de crédito.
+                  Não. Todas as dinâmicas são simples, práticas e pensadas para o dia a dia da sala de aula.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-6" className="border-none">
                 <AccordionTrigger className="hover:no-underline py-4 px-2 text-left font-medium text-gray-800 [&[data-state=open]]:text-brand-green">
+                  Posso usar em sala com vários alunos?
+                </AccordionTrigger>
+                <AccordionContent className="px-2 text-gray-600">
+                  Sim. As dinâmicas foram pensadas para uso em grupo, facilitando a participação de toda a turma.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7" className="border-none">
+                <AccordionTrigger className="hover:no-underline py-4 px-2 text-left font-medium text-gray-800 [&[data-state=open]]:text-brand-green">
+                  Quais formas de pagamento são aceitas?
+                </AccordionTrigger>
+                <AccordionContent className="px-2 text-gray-600">
+                  Você pode pagar via cartão de crédito, Pix ou outras opções disponíveis na página de checkout.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8" className="border-none">
+                <AccordionTrigger className="hover:no-underline py-4 px-2 text-left font-medium text-gray-800 [&[data-state=open]]:text-brand-green">
                   Tem garantia?
                 </AccordionTrigger>
                 <AccordionContent className="px-2 text-gray-600">
-                  Sim, oferecemos garantia de satisfação de 7 dias. Se não gostar, devolvemos seu dinheiro.
+                  Sim. Você tem 7 dias de garantia. Se não gostar do material, pode pedir reembolso.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
           </div>
 
-          {/* Button below FAQ */}
           <div className="mt-10">
             <Button 
               onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2 uppercase tracking-tight px-4 leading-tight"
+              data-testid="button-faq-cta"
+              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center uppercase tracking-tight px-4 leading-tight"
             >
-              <span className="shrink-0">👉</span> <span>Quero aproveitar a oferta agora</span>
+              QUERO APROVEITAR A OFERTA AGORA
             </Button>
           </div>
         </section>
 
         {/* Footer */}
         <footer className="pt-8 pb-16 text-center space-y-8 bg-white">
-           <div className="space-y-4">
-             <div className="flex items-center justify-center gap-2 text-lg font-bold">
-               <div className="w-6 h-6 bg-red-100 rounded flex items-center justify-center text-red-500">
-                 <Mail className="w-4 h-4" />
-               </div>
-               Precisa de Ajuda?
-             </div>
-             <p className="text-gray-600 max-w-sm mx-auto text-sm leading-relaxed px-4">
-               Envie um e-mail para <span className="font-semibold text-gray-900">moldeseva.suporte@gmail.com</span> e nossa equipe responderá rapidamente para ajudá-lo com qualquer dúvida ou problema.
-             </p>
-           </div>
+          <div className="space-y-4">
+            <div className="flex items-center justify-center gap-2 text-lg font-bold text-gray-900" data-testid="text-help-heading">
+              <div className="w-6 h-6 bg-red-100 rounded flex items-center justify-center text-red-500">
+                <Mail className="w-4 h-4" />
+              </div>
+              Precisa de ajuda?
+            </div>
+            <p className="text-gray-600 max-w-sm mx-auto text-sm leading-relaxed px-4" data-testid="text-help-description">
+              Envie um e-mail para <span className="font-semibold text-gray-900">suporte@120dinamicasmatematicas.com</span> e nossa equipe responderá o mais rápido possível para te ajudar com qualquer dúvida.
+            </p>
+          </div>
 
-           <div className="text-xs text-gray-400 max-w-md mx-auto px-6 leading-relaxed">
-             Na nossa plataforma, desenvolvemos moldes de EVA que incentivam o artesanato e a decoração de forma lúdica e envolvente. Nosso compromisso é garantir qualidade e inovação, ajudando artesãos e professores a criarem de maneira eficaz e divertida.
-           </div>
+          <div className="max-w-md mx-auto px-6 space-y-3">
+            <h3 className="text-lg font-bold text-gray-900" data-testid="text-about-heading">Sobre o material</h3>
+            <p className="text-sm text-gray-600 leading-relaxed" data-testid="text-about-paragraph-1">
+              Desenvolvemos este material para ajudar professoras da educação infantil a tornarem suas aulas de matemática mais leves, dinâmicas e envolventes.
+            </p>
+            <p className="text-sm text-gray-600 leading-relaxed" data-testid="text-about-paragraph-2">
+              Nosso objetivo é facilitar o seu dia a dia em sala de aula, oferecendo atividades prontas que ajudam a prender a atenção das crianças e tornar o aprendizado mais divertido.
+            </p>
+          </div>
         </footer>
       </div>
 
