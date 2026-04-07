@@ -159,7 +159,7 @@ export default function Home() {
 
         {/* What You Will Receive Section */}
         <section className="py-12 space-y-8">
-          <h2 className="text-3xl font-black text-center text-gray-900 font-display">
+          <h2 className="text-3xl font-black text-center text-gray-900 font-display" data-testid="text-what-you-will-receive">
             O Que Você Vai Receber
           </h2>
           <div className="grid gap-6">
@@ -169,8 +169,8 @@ export default function Home() {
                   <BookOpen className="w-6 h-6 text-brand-purple" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900">Moldes Prontos em PDF</h3>
-                  <p className="text-gray-600 text-sm">Mais de 2000 moldes de alta qualidade (animais, heróis, flores, natal, páscoa e mais).</p>
+                  <h3 className="text-lg font-bold text-gray-900" data-testid="text-receive-item-1-title">120 Dinâmicas de Matemática Prontas</h3>
+                  <p className="text-gray-600 text-sm" data-testid="text-receive-item-1-description">Jogos, brincadeiras e atividades interativas pensadas para ensinar matemática de forma leve e divertida na educação infantil.</p>
                 </div>
               </div>
             </div>
@@ -181,8 +181,20 @@ export default function Home() {
                   <Printer className="w-6 h-6 text-yellow-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900">Pronto para Imprimir (A4)</h3>
-                  <p className="text-gray-600 text-sm">Arquivos formatados no tamanho exato para folha A4. É só imprimir, recortar e usar no EVA.</p>
+                  <h3 className="text-lg font-bold text-gray-900" data-testid="text-receive-item-2-title">Pronto para Imprimir (A4)</h3>
+                  <p className="text-gray-600 text-sm" data-testid="text-receive-item-2-description">Todos os materiais organizados e formatados no tamanho ideal para folha A4. É só imprimir e aplicar em sala de aula.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border-2 border-blue-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="bg-blue-100 p-3 rounded-xl">
+                  <Check className="w-6 h-6 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900" data-testid="text-receive-item-3-title">Fácil de Aplicar na Prática</h3>
+                  <p className="text-gray-600 text-sm" data-testid="text-receive-item-3-description">Atividades simples, rápidas e adaptadas para o dia a dia da professora — sem complicação e sem precisar planejar.</p>
                 </div>
               </div>
             </div>
@@ -193,8 +205,8 @@ export default function Home() {
                   <CheckCircle2 className="w-6 h-6 text-brand-green" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900">Acesso Vitalício</h3>
-                  <p className="text-gray-600 text-sm">Compre uma única vez e tenha acesso para sempre, com downloads ilimitados de todos os arquivos.</p>
+                  <h3 className="text-lg font-bold text-gray-900" data-testid="text-receive-item-4-title">Acesso Vitalício</h3>
+                  <p className="text-gray-600 text-sm" data-testid="text-receive-item-4-description">Compre uma única vez e tenha acesso para sempre, podendo baixar e usar quando quiser.</p>
                 </div>
               </div>
             </div>
