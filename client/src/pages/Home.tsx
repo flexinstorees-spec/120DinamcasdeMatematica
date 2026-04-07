@@ -10,7 +10,6 @@ import {
   ChevronDown,
   Star,
   Check,
-  Award,
   Gift,
   Music4,
   Trophy,
@@ -31,6 +30,7 @@ import slide1 from "@assets/stock_images/kids_in_classroom_le_b8e756c7.jpg";
 import slide2 from "@assets/stock_images/kids_in_classroom_le_23e6cce6.jpg";
 import slide3 from "@assets/stock_images/kids_in_classroom_le_d60b13fe.jpg";
 import learnIcon from "@assets/stock_images/happy_child_holding__5bdc9d4e.jpg";
+import certificateBonusImage from "@assets/E47E3840-DF10-4D9D-854A-6BCDDB3D0A9E_1775585886752.png";
 import unoBonusImage from "@assets/IMG_1161_1775585600425.png";
 
 export default function Home() {
@@ -232,9 +232,7 @@ export default function Home() {
                 name: "Certificados de Conclusão para os Alunos",
                 desc: "Modelos prontos para premiar e motivar as crianças ao final das atividades.",
                 price: "R$ 47,00",
-                icon: Award,
-                iconBg: "bg-purple-100",
-                iconColor: "text-brand-purple"
+                image: certificateBonusImage
               },
               {
                 name: "Sistema de Recompensas para Sala de Aula",
