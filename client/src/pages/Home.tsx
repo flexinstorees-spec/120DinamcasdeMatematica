@@ -322,26 +322,14 @@ export default function Home() {
               Você recebe acesso imediato a:
             </p>
 
-            <div className="space-y-4 mb-6">
+            <div className="space-y-4 mb-8">
               {[
                 "+120 Dinâmicas de Matemática (Prontas para Aplicar)",
                 "Certificados de Conclusão para os Alunos",
                 "Sistema de Recompensas para Sala de Aula",
                 "Músicas Matemáticas para Aprender Brincando",
                 "Super Bingo Matemático para Sala de Aula",
-                "Desafio das Cartas Matemáticas"
-              ].map((benefit, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="bg-brand-green rounded-full p-1.5 shrink-0 mt-0.5">
-                    <CheckCircle2 className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="font-bold text-base text-left tracking-tight text-gray-900 leading-tight">{benefit}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="mb-8 space-y-4 border-t border-dashed border-brand-green/30 pt-6">
-              {[
+                "Desafio das Cartas Matemáticas",
                 "Suporte 24/7",
                 "Garantia de 7 Dias",
                 "Acesso Imediato após a compra"
