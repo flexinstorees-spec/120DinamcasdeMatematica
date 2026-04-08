@@ -355,7 +355,7 @@ export default function Home() {
               asChild
               className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center gap-2"
             >
-              <a href="https://checkout.moldesdeeva.site/VCCL1O8SCB17" target="_blank" rel="noopener noreferrer" data-testid="button-buy-now">
+              <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer" data-testid="button-buy-now">
                 QUERO COMPRAR AGORA
               </a>
             </Button>
