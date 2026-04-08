@@ -36,9 +36,17 @@ import testimonialImage1 from "@assets/img_0363_(1)_1775602956061.png";
 import testimonialImage2 from "@assets/img_0363_(2)_1775602956061.png";
 import testimonialImage3 from "@assets/img_0363_(3)_1775602956061.png";
 import testimonialImage4 from "@assets/img_0363_(4)_1775602956061.png";
+import dynamicsImage1 from "@assets/1_1775690645262.png";
+import dynamicsImage2 from "@assets/2_1775690645262.png";
+import dynamicsImage3 from "@assets/3_1775690645262.png";
+import dynamicsImage4 from "@assets/4_1775690645262.png";
+import dynamicsImage5 from "@assets/5_1775690645263.png";
+import dynamicsImage6 from "@assets/6_1775690645263.png";
+import dynamicsImage7 from "@assets/7_1775690645263.png";
 
 export default function Home() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [dynamicsEmblaRef, dynamicsEmblaApi] = useEmblaCarousel({ loop: true, align: "start" });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showNotification, setShowNotification] = useState(false);
   const [currentNotification, setCurrentNotification] = useState({ name: "", city: "" });
@@ -114,6 +122,16 @@ export default function Home() {
     emblaApi.on("select", onSelect);
   }, [emblaApi, onSelect]);
 
+  React.useEffect(() => {
+    if (!dynamicsEmblaApi) return;
+
+    const autoplay = window.setInterval(() => {
+      dynamicsEmblaApi.scrollNext();
+    }, 2600);
+
+    return () => window.clearInterval(autoplay);
+  }, [dynamicsEmblaApi]);
+
   const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
@@ -122,6 +140,16 @@ export default function Home() {
     testimonialImage2,
     testimonialImage3,
     testimonialImage4
+  ];
+
+  const dynamicsGallery = [
+    { image: dynamicsImage1, title: "Sempre Dez" },
+    { image: dynamicsImage2, title: "Multiplicação em Ação" },
+    { image: dynamicsImage3, title: "Amarelinha da Multiplicação" },
+    { image: dynamicsImage4, title: "Número Secreto" },
+    { image: dynamicsImage5, title: "Roleta da Soma" },
+    { image: dynamicsImage6, title: "Sonho da Tabuada" },
+    { image: dynamicsImage7, title: "Sorvete da Matemática" }
   ];
 
   return (
@@ -214,6 +242,39 @@ export default function Home() {
                   <h3 className="text-lg font-bold text-gray-900" data-testid="text-receive-item-4-title">Acesso Vitalício</h3>
                   <p className="text-gray-600 text-sm" data-testid="text-receive-item-4-description">Compre uma única vez e tenha acesso para sempre, podendo baixar e usar quando quiser.</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 space-y-8">
+          <div className="text-center space-y-3">
+            <h2 className="text-3xl font-black text-gray-900 font-display" data-testid="text-dynamics-gallery-title">
+              Algumas das Dinâmicas que Você Receberá
+            </h2>
+            <p className="text-sm leading-relaxed text-gray-600 max-w-md mx-auto" data-testid="text-dynamics-gallery-description">
+              Veja algumas ideias prontas que já vão chegar organizadas para você aplicar com as crianças.
+            </p>
+          </div>
+
+          <div className="relative overflow-hidden rounded-[2rem] border border-brand-green/15 bg-gradient-to-br from-emerald-50 via-white to-green-50 px-3 py-4 shadow-[0_20px_60px_rgba(29,83,54,0.08)]">
+            <div className="overflow-hidden" ref={dynamicsEmblaRef}>
+              <div className="flex">
+                {dynamicsGallery.map((item, index) => (
+                  <div className="min-w-0 flex-[0_0_82%] pl-2 sm:flex-[0_0_58%]" key={item.title}>
+                    <div className="overflow-hidden rounded-[1.75rem] bg-white p-2 shadow-lg ring-1 ring-black/5" data-testid={`card-dynamic-${index}`}>
+                      <div className="relative overflow-hidden rounded-[1.35rem] bg-gray-100">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="h-[420px] w-full object-cover object-center"
+                          data-testid={`img-dynamic-${index}`}
+                        />
+                        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/35 via-black/10 to-transparent" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
