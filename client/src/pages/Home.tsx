@@ -267,7 +267,7 @@ export default function Home() {
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="h-[420px] w-full object-cover object-center"
+                          className="h-auto max-h-[420px] w-full object-contain object-center"
                           data-testid={`img-dynamic-${index}`}
                         />
                         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/35 via-black/10 to-transparent" />
