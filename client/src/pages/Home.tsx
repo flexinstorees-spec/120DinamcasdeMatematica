@@ -420,14 +420,14 @@ export default function Home() {
           </div>
 
           {/* Basic Offer Card */}
-          <div className="bg-white rounded-3xl border-2 border-gray-300 p-6 shadow-md max-w-sm mx-auto relative overflow-hidden mt-6">
+          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-md max-w-sm mx-auto relative overflow-hidden mt-6">
             <h3 className="text-xl font-black text-center mb-4 text-gray-700 leading-tight" data-testid="text-offer-title-basic">
               Apenas as 120 Dinâmicas (Sem Bônus)
             </h3>
 
             <div className="text-center mb-6">
               <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-basic">Apenas o material principal:</p>
-              <p className="text-5xl font-black text-gray-800 mt-2 tracking-tighter" data-testid="text-offer-price-basic">R$ 10,00</p>
+              <p className="text-5xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-basic">R$ 10,00</p>
             </div>
 
             <div className="space-y-4 mb-8">
@@ -438,7 +438,7 @@ export default function Home() {
                 "Acesso Imediato após a compra"
               ].map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="bg-gray-700 rounded-full p-1.5 shrink-0 mt-0.5">
+                  <div className="bg-brand-green rounded-full p-1.5 shrink-0 mt-0.5">
                     <CheckCircle2 className="w-5 h-5 text-white" />
                   </div>
                   <span className="font-bold text-base text-left tracking-tight text-gray-700 leading-tight">{benefit}</span>
@@ -448,8 +448,7 @@ export default function Home() {
 
             <Button 
               asChild
-              variant="outline"
-              className="w-full border-2 border-gray-400 hover:bg-gray-50 text-gray-700 font-bold text-lg py-6 rounded-xl shadow-sm transition-all flex items-center gap-2"
+              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center gap-2"
             >
               <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer" data-testid="button-buy-now-basic">
                 QUERO APENAS AS DINÂMICAS
