@@ -704,7 +704,7 @@ export default function Home() {
                 asChild
                 className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold py-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
               >
-                <a href="https://pay.wiapy.com/ba24ICov6z" target="_blank" rel="noopener noreferrer">
+                <a href="https://pay.wiapy.com/O-PAtPXvk" target="_blank" rel="noopener noreferrer">
                   SIM, QUERO COM DESCONTO
                 </a>
               </Button>
