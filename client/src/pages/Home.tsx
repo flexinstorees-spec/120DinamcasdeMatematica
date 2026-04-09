@@ -43,6 +43,7 @@ import dynamicsImage4 from "@assets/4_1775690645262.png";
 import dynamicsImage5 from "@assets/5_1775690645263.png";
 import dynamicsImage6 from "@assets/6_1775690645263.png";
 import dynamicsImage7 from "@assets/7_1775690645263.png";
+import newOfferLogo from "@assets/5439FBF1-6AB6-45E4-994B-9B630889449C_1775774888310.png";
 
 export default function Home() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -362,14 +363,14 @@ export default function Home() {
             <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
             <div className="text-center mb-6 mt-2">
               <img 
-                src="https://i.imgur.com/vvdA6t1.png" 
-                alt="Logo 120 Dinâmicas de Matemática" 
-                className="mx-auto w-full max-w-[220px] h-auto object-contain"
+                src={newOfferLogo}
+                alt="Logo 120 Dinâmicas de Matemática + Bônus" 
+                className="mx-auto w-full max-w-[280px] h-auto object-contain drop-shadow-md"
               />
             </div>
 
             <h3 className="text-2xl font-black text-center mb-4 text-gray-900 leading-tight" data-testid="text-offer-title-main">
-              OFERTA COMPLETA:<br/><span className="text-brand-green">+120 Dinâmicas + 5 Bônus</span>
+              OFERTA COMPLETA:
             </h3>
 
             <div className="text-center mb-6">
