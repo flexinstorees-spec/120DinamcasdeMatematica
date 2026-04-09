@@ -10,7 +10,8 @@ import {
   ChevronDown,
   Star,
   Check,
-  Gamepad2
+  Gamepad2,
+  X
 } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import {
@@ -52,6 +53,7 @@ export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showNotification, setShowNotification] = useState(false);
   const [currentNotification, setCurrentNotification] = useState({ name: "", city: "" });
+  const [showDiscountPopup, setShowDiscountPopup] = useState(false);
 
   const buyers = [
     { name: "Patrícia", city: "São Paulo" },
@@ -360,6 +362,58 @@ export default function Home() {
 
         {/* Pricing Card */}
         <section id="pricing-section" className="py-8">
+          {/* Basic Offer Card */}
+          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-md max-w-sm mx-auto relative overflow-hidden mb-6">
+            <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
+            <div className="text-center mb-6 mt-2">
+              <img 
+                src={basicOfferLogo}
+                alt="Logo 120 Dinâmicas de Matemática" 
+                className="mx-auto w-full max-w-[280px] h-auto object-contain drop-shadow-md"
+              />
+            </div>
+
+            <h3 className="text-xl font-black text-center mb-4 text-gray-700 leading-tight" data-testid="text-offer-title-basic">
+              Apenas as 120 Dinâmicas<br/><span className="text-sm font-medium text-gray-500">(Sem Bônus)</span>
+            </h3>
+
+            <div className="text-center mb-6">
+              <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-basic">Apenas o material principal:</p>
+              <p className="text-5xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-basic">R$ 10,00</p>
+            </div>
+
+            <div className="space-y-4 mb-8">
+              {[
+                "+120 Dinâmicas de Matemática (Prontas para Aplicar)",
+                "Suporte 24/7",
+                "Garantia de 7 Dias",
+                "Acesso Imediato após a compra"
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="bg-brand-green rounded-full p-1.5 shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="font-bold text-base text-left tracking-tight text-gray-700 leading-tight">{benefit}</span>
+                </div>
+              ))}
+            </div>
+
+            <Button 
+              onClick={() => setShowDiscountPopup(true)}
+              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center gap-2"
+              data-testid="button-buy-now-basic"
+            >
+              QUERO APENAS AS DINÂMICAS
+            </Button>
+          </div>
+
+          <div className="mb-8 flex items-center justify-center gap-4 px-4">
+            <div className="h-[1px] flex-1 bg-gray-200"></div>
+            <span className="text-gray-400 font-medium text-sm uppercase tracking-wider">OU</span>
+            <div className="h-[1px] flex-1 bg-gray-200"></div>
+          </div>
+
+          {/* Main Offer Card */}
           <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden">
             <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
             <div className="text-center mb-6 mt-2">
@@ -411,58 +465,6 @@ export default function Home() {
             >
               <a href="https://pay.wiapy.com/ba24ICov6z" target="_blank" rel="noopener noreferrer" data-testid="button-buy-now-main">
                 QUERO A OFERTA COMPLETA
-              </a>
-            </Button>
-          </div>
-
-          <div className="mt-8 mb-4 flex items-center justify-center gap-4 px-4">
-            <div className="h-[1px] flex-1 bg-gray-200"></div>
-            <span className="text-gray-400 font-medium text-sm uppercase tracking-wider">OU</span>
-            <div className="h-[1px] flex-1 bg-gray-200"></div>
-          </div>
-
-          {/* Basic Offer Card */}
-          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-md max-w-sm mx-auto relative overflow-hidden mt-6">
-            <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
-            <div className="text-center mb-6 mt-2">
-              <img 
-                src={basicOfferLogo}
-                alt="Logo 120 Dinâmicas de Matemática" 
-                className="mx-auto w-full max-w-[280px] h-auto object-contain drop-shadow-md"
-              />
-            </div>
-
-            <h3 className="text-xl font-black text-center mb-4 text-gray-700 leading-tight" data-testid="text-offer-title-basic">
-              Apenas as 120 Dinâmicas<br/><span className="text-sm font-medium text-gray-500">(Sem Bônus)</span>
-            </h3>
-
-            <div className="text-center mb-6">
-              <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-basic">Apenas o material principal:</p>
-              <p className="text-5xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-basic">R$ 10,00</p>
-            </div>
-
-            <div className="space-y-4 mb-8">
-              {[
-                "+120 Dinâmicas de Matemática (Prontas para Aplicar)",
-                "Suporte 24/7",
-                "Garantia de 7 Dias",
-                "Acesso Imediato após a compra"
-              ].map((benefit, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="bg-brand-green rounded-full p-1.5 shrink-0 mt-0.5">
-                    <CheckCircle2 className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="font-bold text-base text-left tracking-tight text-gray-700 leading-tight">{benefit}</span>
-                </div>
-              ))}
-            </div>
-
-            <Button 
-              asChild
-              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center gap-2"
-            >
-              <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer" data-testid="button-buy-now-basic">
-                QUERO APENAS AS DINÂMICAS
               </a>
             </Button>
           </div>
@@ -664,6 +666,62 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Discount Popup */}
+      {showDiscountPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-3xl p-6 md:p-8 max-w-sm w-full relative shadow-2xl animate-in zoom-in-95 duration-200">
+            <button 
+              onClick={() => setShowDiscountPopup(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            
+            <div className="text-center mb-6">
+              <span className="inline-block bg-brand-green/10 text-brand-green font-black px-4 py-1.5 rounded-full text-sm uppercase tracking-wider mb-4">
+                ESPERE!
+              </span>
+              <h3 className="text-2xl font-black text-gray-900 leading-tight mb-2">
+                Leve o pacote COMPLETO com Desconto!
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Adicione todos os <span className="font-bold text-gray-900">5 Bônus Exclusivos</span> por uma diferença mínima.
+              </p>
+            </div>
+
+            <div className="bg-gray-50 rounded-2xl p-4 mb-6 border border-gray-100">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-gray-500 font-medium line-through">De R$ 27,00</span>
+                <span className="text-brand-green font-black text-2xl">Por R$ 17,00</span>
+              </div>
+              <p className="text-xs text-center text-gray-500">
+                Você leva as 120 Dinâmicas + 5 Bônus!
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <Button 
+                asChild
+                className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold py-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+              >
+                <a href="https://pay.wiapy.com/ba24ICov6z" target="_blank" rel="noopener noreferrer">
+                  SIM, QUERO COM DESCONTO
+                </a>
+              </Button>
+              
+              <Button 
+                variant="ghost"
+                asChild
+                className="w-full text-gray-500 hover:text-gray-700 font-medium hover:bg-gray-100 h-auto py-3 rounded-xl transition-colors"
+              >
+                <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer">
+                  Não, quero só as dinâmicas por R$ 10,00
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
