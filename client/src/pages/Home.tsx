@@ -50,7 +50,7 @@ import dynamicsImage10 from "@assets/8_1775867563170.png";
 import dynamicsImage11 from "@assets/9_1775867563170.png";
 import newOfferLogo from "@assets/5439FBF1-6AB6-45E4-994B-9B630889449C_1775774888310.png";
 import basicOfferLogo from "@assets/Imagem_PNG_1775775056215.png";
-import apostilaImage from "@assets/APOSTILA_3000X3000_1776120740773.png";
+import apostilaImage from "@assets/da_1776121698891.png";
 
 export default function Home() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
