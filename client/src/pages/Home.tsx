@@ -173,8 +173,8 @@ export default function Home() {
       <div className="max-w-md mx-auto px-4 sm:max-w-lg md:max-w-2xl">
         {/* Hero Section */}
         <header className="py-8 text-center space-y-4">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight" data-testid="text-headline">
-            <span className="font-black" style={{ color: "#1d5336" }}>+120 Dinâmicas de Matemática</span>{" "}
+          <h1 className="text-4xl md:text-5xl font-black text-gray-900 leading-[1.1] tracking-tight" data-testid="text-headline">
+            <span className="font-black drop-shadow-sm" style={{ color: "#1d5336" }}>+120 Dinâmicas de Matemática</span>{" "}
             Prontas para Imprimir
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed" data-testid="text-subheadline">
