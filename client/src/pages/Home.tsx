@@ -624,7 +624,7 @@ export default function Home() {
             <Button 
               onClick={(e) => {
                 e.preventDefault();
-                setShowDiscountPopup(true);
+                document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
               }}
               data-testid="button-faq-cta"
               className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center uppercase tracking-tight px-4 leading-tight"
