@@ -101,6 +101,20 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0) {
+        setShowDiscountPopup(true);
+      }
+    };
+
+    document.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      document.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
   const onSelect = React.useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
@@ -707,7 +721,7 @@ export default function Home() {
               
               <div className="py-4">
                 <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 27,00</p>
-                <p className="text-6xl font-black text-brand-green tracking-tighter">R$ 17,00</p>
+                <p className="text-6xl font-black text-brand-green tracking-tighter">R$ 5,90</p>
               </div>
               
               <div className="bg-green-50 rounded-xl p-4 text-left mb-6">
@@ -722,19 +736,18 @@ export default function Home() {
                 asChild
                 className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
               >
-                <a href="https://pay.wiapy.com/O-PAtPXvk" target="_blank" rel="noopener noreferrer">
-                  QUERO A OFERTA COMPLETA POR R$ 17
+                <a href="https://pay.wiapy.com/5UYb0Ch6b" target="_blank" rel="noopener noreferrer">
+                  QUERO A OFERTA COMPLETA POR R$ 5,90
                 </a>
               </Button>
               
               <button 
                 onClick={() => {
                   setShowDiscountPopup(false);
-                  window.open("https://pay.wiapy.com/iK5ZWZeMKD", "_blank");
                 }}
                 className="text-gray-400 hover:text-gray-600 text-sm underline underline-offset-4 mt-4 transition-colors"
               >
-                Não, obrigado. Quero apenas o pacote básico por R$ 10,00.
+                Não, obrigado. Vou perder essa oportunidade única.
               </button>
             </div>
           </div>
