@@ -108,10 +108,21 @@ export default function Home() {
       }
     };
 
+    const handlePopState = (e: PopStateEvent) => {
+      // Prevent default back behavior
+      window.history.pushState(null, "", window.location.href);
+      setShowDiscountPopup(true);
+    };
+
     document.addEventListener("mouseleave", handleMouseLeave);
+    
+    // Setup back button trap
+    window.history.pushState(null, "", window.location.href);
+    window.addEventListener("popstate", handlePopState);
 
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("popstate", handlePopState);
     };
   }, []);
 
