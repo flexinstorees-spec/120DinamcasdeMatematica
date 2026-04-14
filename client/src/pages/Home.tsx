@@ -326,6 +326,84 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Middle CTA Section */}
+        <section className="py-8">
+          <div className="bg-gradient-to-br from-brand-green to-emerald-700 rounded-3xl p-6 shadow-xl text-center text-white space-y-6">
+            <h2 className="text-2xl md:text-3xl font-black leading-tight">
+              Pronta para transformar suas aulas de matemática?
+            </h2>
+            <p className="text-emerald-50 text-base md:text-lg">
+              Garanta agora as 120 dinâmicas + 5 bônus exclusivos com desconto especial.
+            </p>
+            <div className="pt-2">
+              <Button 
+                onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full bg-brand-yellow hover:bg-yellow-400 text-gray-900 font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center uppercase tracking-tight px-4 leading-tight"
+              >
+                QUERO APROVEITAR O DESCONTO
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Middle Pricing Card */}
+        <section className="py-8">
+          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden">
+            <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
+            <div className="text-center mb-2 mt-2">
+              <img 
+                src={newOfferLogo}
+                alt="Logo 120 Dinâmicas de Matemática + Bônus" 
+                className="mx-auto w-full max-w-[280px] h-auto object-contain drop-shadow-md"
+              />
+            </div>
+
+            <h3 className="text-2xl font-black text-center mb-4 text-gray-900 leading-tight" data-testid="text-offer-title-middle">
+              OFERTA COMPLETA:
+            </h3>
+
+            <div className="text-center mb-6">
+              <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-middle">De R$ 57,00 por apenas:</p>
+              <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 57,00</p>
+              <p className="text-6xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-middle">R$ 10,00</p>
+            </div>
+
+            <p className="text-center text-sm font-semibold text-gray-700 mb-6" data-testid="text-offer-access-intro-middle">
+              Você recebe acesso imediato a:
+            </p>
+
+            <div className="space-y-4 mb-8">
+              {[
+                "+120 Dinâmicas de Matemática (Prontas para Aplicar)",
+                "Certificados de Conclusão para os Alunos",
+                "Sistema de Recompensas para Sala de Aula",
+                "Músicas Matemáticas para Aprender Brincando",
+                "Super Bingo Matemático para Sala de Aula",
+                "Desafio das Cartas Matemáticas",
+                "Suporte 24/7",
+                "Garantia de 7 Dias",
+                "Acesso Imediato após a compra"
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="bg-brand-green rounded-full p-1.5 shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="font-bold text-base text-left tracking-tight text-gray-900 leading-tight">{benefit}</span>
+                </div>
+              ))}
+            </div>
+
+            <Button 
+              asChild
+              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center gap-2"
+            >
+              <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer" data-testid="button-buy-now-middle">
+                QUERO A OFERTA COMPLETA
+              </a>
+            </Button>
+          </div>
+        </section>
+
         {/* Exclusive Bonuses Section */}
         <section className="py-12 space-y-8">
           <div className="text-center">
@@ -549,15 +627,73 @@ export default function Home() {
               </AccordionItem>
             </Accordion>
           </div>
+        </section>
 
-          <div className="mt-10">
+        {/* Second Pricing Card */}
+        <section className="py-8">
+          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden">
+            <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
+            <div className="text-center mb-2 mt-2">
+              <img 
+                src={newOfferLogo}
+                alt="Logo 120 Dinâmicas de Matemática + Bônus" 
+                className="mx-auto w-full max-w-[280px] h-auto object-contain drop-shadow-md"
+              />
+            </div>
+
+            <h3 className="text-2xl font-black text-center mb-4 text-gray-900 leading-tight" data-testid="text-offer-title-second">
+              OFERTA COMPLETA:
+            </h3>
+
+            <div className="text-center mb-6">
+              <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-second">De R$ 57,00 por apenas:</p>
+              <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 57,00</p>
+              <p className="text-6xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-second">R$ 10,00</p>
+            </div>
+
+            <p className="text-center text-sm font-semibold text-gray-700 mb-6" data-testid="text-offer-access-intro-second">
+              Você recebe acesso imediato a:
+            </p>
+
+            <div className="space-y-4 mb-8">
+              {[
+                "+120 Dinâmicas de Matemática (Prontas para Aplicar)",
+                "Certificados de Conclusão para os Alunos",
+                "Sistema de Recompensas para Sala de Aula",
+                "Músicas Matemáticas para Aprender Brincando",
+                "Super Bingo Matemático para Sala de Aula",
+                "Desafio das Cartas Matemáticas",
+                "Suporte 24/7",
+                "Garantia de 7 Dias",
+                "Acesso Imediato após a compra"
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="bg-brand-green rounded-full p-1.5 shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="font-bold text-base text-left tracking-tight text-gray-900 leading-tight">{benefit}</span>
+                </div>
+              ))}
+            </div>
+
             <Button 
-              onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}
-              data-testid="button-faq-cta"
-              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center uppercase tracking-tight px-4 leading-tight"
+              asChild
+              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center gap-2"
             >
-              QUERO APROVEITAR A OFERTA AGORA
+              <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer" data-testid="button-buy-now-second">
+                QUERO A OFERTA COMPLETA
+              </a>
             </Button>
+          </div>
+
+          {/* Email Delivery Banner */}
+          <div className="mt-6 bg-white rounded-2xl border-2 border-brand-green p-4 flex items-center gap-4 shadow-sm max-w-sm mx-auto">
+            <div className="bg-brand-green rounded-full p-2 shrink-0">
+              <Mail className="w-6 h-6 text-white" />
+            </div>
+            <p className="text-gray-900 font-bold text-sm leading-snug">
+              Após a compra, você recebe acesso ao Material em PDF diretamente no seu E-mail
+            </p>
           </div>
         </section>
 
