@@ -58,7 +58,7 @@ export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showNotification, setShowNotification] = useState(false);
   const [currentNotification, setCurrentNotification] = useState({ name: "", city: "" });
-  const [showDiscountPopup, setShowDiscountPopup] = useState(false);
+  const [discountPopupType, setDiscountPopupType] = useState<"upsell" | "exit" | null>(null);
 
   const buyers = [
     { name: "Patrícia", city: "São Paulo" },
@@ -104,14 +104,16 @@ export default function Home() {
   useEffect(() => {
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
-        setShowDiscountPopup(true);
+        setDiscountPopupType("exit");
       }
     };
 
     const handlePopState = (e: PopStateEvent) => {
       // Prevent default back behavior
       window.history.pushState(null, "", window.location.href);
-      setShowDiscountPopup(true);
+      if (!discountPopupType) {
+        setDiscountPopupType("exit");
+      }
     };
 
     document.addEventListener("mouseleave", handleMouseLeave);
@@ -124,7 +126,7 @@ export default function Home() {
       document.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("popstate", handlePopState);
     };
-  }, []);
+  }, [discountPopupType]);
 
   const onSelect = React.useCallback(() => {
     if (!emblaApi) return;
@@ -486,7 +488,7 @@ export default function Home() {
             <Button 
               onClick={(e) => {
                 e.preventDefault();
-                setShowDiscountPopup(true);
+                setDiscountPopupType("upsell");
               }}
               className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center gap-2"
             >
@@ -707,11 +709,11 @@ export default function Home() {
       </div>
 
       {/* Discount Popup */}
-      {showDiscountPopup && (
+      {discountPopupType && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
           <div className="bg-white rounded-3xl p-6 md:p-8 max-w-md w-full shadow-2xl relative animate-in fade-in zoom-in duration-300">
             <button 
-              onClick={() => setShowDiscountPopup(false)}
+              onClick={() => setDiscountPopupType(null)}
               className="absolute top-4 right-4 p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
             >
               <X className="w-5 h-5 text-gray-500" />
@@ -732,14 +734,20 @@ export default function Home() {
               
               <div className="py-4">
                 <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 27,00</p>
-                <p className="text-6xl font-black text-brand-green tracking-tighter">R$ 5,90</p>
+                <p className="text-6xl font-black text-brand-green tracking-tighter">
+                  {discountPopupType === "exit" ? "R$ 5,90" : "R$ 17,00"}
+                </p>
               </div>
               
               <div className="bg-green-50 rounded-xl p-4 text-left mb-6">
                 <p className="font-bold text-sm text-brand-green mb-2">Você vai levar:</p>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-green" /> +120 Dinâmicas</li>
-                  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Todos os 5 Bônus Exclusivos</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-green" /> +120 Dinâmicas de Matemática</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Bônus 1: Certificados de Conclusão</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Bônus 2: Sistema de Recompensas</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Bônus 3: Músicas Matemáticas</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Bônus 4: Super Bingo Matemático</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-brand-green" /> Bônus 5: Desafio Uno Matemático</li>
                 </ul>
               </div>
               
@@ -747,18 +755,30 @@ export default function Home() {
                 asChild
                 className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-[13px] sm:text-base md:text-lg h-14 sm:h-16 rounded-xl shadow-md transition-all flex items-center justify-center px-2"
               >
-                <a href="https://pay.wiapy.com/5UYb0Ch6b" target="_blank" rel="noopener noreferrer" className="text-center w-full">
-                  QUERO A OFERTA COMPLETA POR R$ 5,90
+                <a 
+                  href={discountPopupType === "exit" ? "https://pay.wiapy.com/5UYb0Ch6b" : "https://pay.wiapy.com/O-PAtPXvk"} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-center w-full"
+                >
+                  QUERO A OFERTA COMPLETA POR {discountPopupType === "exit" ? "R$ 5,90" : "R$ 17,00"}
                 </a>
               </Button>
               
               <button 
                 onClick={() => {
-                  setShowDiscountPopup(false);
+                  if (discountPopupType === "upsell") {
+                    setDiscountPopupType(null);
+                    window.open("https://pay.wiapy.com/iK5ZWZeMKD", "_blank");
+                  } else {
+                    setDiscountPopupType(null);
+                  }
                 }}
                 className="text-gray-400 hover:text-gray-600 text-sm underline underline-offset-4 mt-4 transition-colors"
               >
-                Não, obrigado. Vou perder essa oportunidade única.
+                {discountPopupType === "exit" 
+                  ? "Não, obrigado. Vou perder essa oportunidade única." 
+                  : "Não, obrigado. Quero apenas o pacote básico por R$ 10,00."}
               </button>
             </div>
           </div>
