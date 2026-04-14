@@ -49,7 +49,7 @@ import dynamicsImage9 from "@assets/11_1775867563170.png";
 import dynamicsImage10 from "@assets/8_1775867563170.png";
 import dynamicsImage11 from "@assets/9_1775867563170.png";
 import newOfferLogo from "@assets/5439FBF1-6AB6-45E4-994B-9B630889449C_1775774888310.png";
-import basicOfferLogo from "@assets/Imagem_PNG_1775775056215.png";
+import basicOfferLogo from "@assets/image_1776184585306.png";
 import apostilaImage from "@assets/da_1776121698891.png";
 
 export default function Home() {
@@ -416,8 +416,8 @@ export default function Home() {
             <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
             <div className="text-center mb-2 mt-2">
               <img 
-                src={newOfferLogo}
-                alt="Logo 120 Dinâmicas de Matemática + Bônus" 
+                src={basicOfferLogo}
+                alt="Logo 120 Dinâmicas de Matemática" 
                 className="mx-auto w-full max-w-[280px] h-auto object-contain drop-shadow-md"
               />
             </div>
