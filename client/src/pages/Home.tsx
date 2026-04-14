@@ -182,7 +182,7 @@ export default function Home() {
             <Button 
               onClick={(e) => {
                 e.preventDefault();
-                setShowDiscountPopup(true);
+                document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' });
               }}
               className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-black text-lg md:text-xl py-7 rounded-2xl shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2 uppercase tracking-tight px-4 leading-tight"
             >
@@ -472,7 +472,10 @@ export default function Home() {
           </div>
 
           {/* Premium Offer Card - 27,00 */}
-          <div className="bg-white rounded-3xl border-2 border-brand-yellow p-6 shadow-md max-w-sm mx-auto relative overflow-hidden opacity-90 hover:opacity-100 transition-opacity mt-8">
+          <div className="bg-white rounded-3xl border-2 border-brand-yellow p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden transform scale-105 z-10 mt-12">
+            <div className="absolute top-4 right-4 bg-brand-yellow text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider z-10 animate-bounce shadow-md">
+              MAIS VENDIDO
+            </div>
             <div className="absolute top-0 inset-x-0 h-2 bg-brand-yellow"></div>
             <div className="text-center mb-2 mt-2">
               <img 
@@ -482,15 +485,17 @@ export default function Home() {
               />
             </div>
 
-            <h3 className="text-xl font-bold text-center mb-4 text-gray-800 leading-tight">
+            <h3 className="text-2xl font-black text-center mb-4 text-gray-900 leading-tight">
               OFERTA COMPLETA VIP:
             </h3>
 
             <div className="text-center mb-6">
-              <p className="text-4xl font-black text-gray-800 mt-2 tracking-tighter">R$ 27,00</p>
+              <p className="text-gray-500 text-sm">De R$ 97,00 por apenas:</p>
+              <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 97,00</p>
+              <p className="text-6xl font-black text-brand-yellow mt-2 tracking-tighter">R$ 27,00</p>
             </div>
 
-            <p className="text-center text-sm font-medium text-gray-600 mb-6">
+            <p className="text-center text-sm font-semibold text-gray-700 mb-6">
               Você recebe acesso imediato a:
             </p>
 
@@ -507,18 +512,17 @@ export default function Home() {
                 "Acesso Imediato após a compra"
               ].map((benefit, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="bg-brand-yellow rounded-full p-1 shrink-0 mt-0.5">
-                    <Check className="w-4 h-4 text-white" />
+                  <div className="bg-brand-yellow rounded-full p-1.5 shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5 text-white" />
                   </div>
-                  <span className="font-medium text-sm text-left text-gray-700">{benefit}</span>
+                  <span className="font-bold text-base text-left tracking-tight text-gray-900 leading-tight">{benefit}</span>
                 </div>
               ))}
             </div>
 
             <Button 
               asChild
-              variant="outline"
-              className="w-full border-2 border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white font-bold text-base py-5 rounded-xl transition-all"
+              className="w-full bg-brand-yellow hover:bg-yellow-500 text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
             >
               <a href="https://pay.wiapy.com/ba24ICov6z" target="_blank" rel="noopener noreferrer">
                 QUERO A OFERTA VIP COMPLETA
