@@ -403,9 +403,68 @@ export default function Home() {
         </section>
 
         {/* Pricing Card */}
-        <section id="pricing-section" className="py-8">
+        <section id="pricing-section" className="py-8 space-y-8">
+          {/* Base Offer Card - 27,00 */}
+          <div className="bg-white rounded-3xl border-2 border-brand-yellow p-6 shadow-md max-w-sm mx-auto relative overflow-hidden opacity-90 hover:opacity-100 transition-opacity">
+            <div className="absolute top-0 inset-x-0 h-2 bg-brand-yellow"></div>
+            <div className="text-center mb-2 mt-2">
+              <img 
+                src={basicOfferLogo}
+                alt="Logo 120 Dinâmicas de Matemática Básico" 
+                className="mx-auto w-full max-w-[240px] h-auto object-contain drop-shadow-sm"
+              />
+            </div>
+
+            <h3 className="text-xl font-bold text-center mb-4 text-gray-800 leading-tight">
+              APENAS AS DINÂMICAS:
+            </h3>
+
+            <div className="text-center mb-6">
+              <p className="text-4xl font-black text-gray-800 mt-2 tracking-tighter">R$ 27,00</p>
+            </div>
+
+            <p className="text-center text-sm font-medium text-gray-600 mb-6">
+              Você recebe acesso apenas a:
+            </p>
+
+            <div className="space-y-4 mb-8">
+              {[
+                "+120 Dinâmicas de Matemática",
+                "Garantia de 7 Dias",
+                "Acesso Imediato após a compra"
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="bg-brand-yellow rounded-full p-1 shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="font-medium text-sm text-left text-gray-700">{benefit}</span>
+                </div>
+              ))}
+              
+              <div className="flex items-start gap-3 opacity-40">
+                <div className="bg-gray-200 rounded-full p-1 shrink-0 mt-0.5">
+                  <X className="w-4 h-4 text-gray-500" />
+                </div>
+                <span className="font-medium text-sm text-left text-gray-500 line-through">Sem os 5 Bônus Exclusivos</span>
+              </div>
+            </div>
+
+            <Button 
+              asChild
+              variant="outline"
+              className="w-full border-2 border-brand-yellow text-brand-yellow hover:bg-brand-yellow hover:text-white font-bold text-base py-5 rounded-xl transition-all"
+            >
+              <a href="https://pay.wiapy.com/15bX2zL9xM" target="_blank" rel="noopener noreferrer">
+                QUERO APENAS AS DINÂMICAS
+              </a>
+            </Button>
+          </div>
+
           {/* Main Offer Card */}
-          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden">
+          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden transform scale-105 z-10">
+            <div className="absolute top-4 right-4 bg-brand-red text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider z-10 animate-bounce shadow-md">
+              82% OFF
+            </div>
             <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
             <div className="text-center mb-2 mt-2">
               <img 
@@ -461,7 +520,7 @@ export default function Home() {
           </div>
 
           {/* Email Delivery Banner */}
-          <div className="mt-6 bg-white rounded-2xl border-2 border-brand-green p-4 flex items-center gap-4 shadow-sm max-w-sm mx-auto">
+          <div className="mt-6 bg-white rounded-2xl border-2 border-brand-green p-4 flex items-center gap-4 shadow-sm max-w-sm mx-auto z-10 relative">
             <div className="bg-brand-green rounded-full p-2 shrink-0">
               <Mail className="w-6 h-6 text-white" />
             </div>
