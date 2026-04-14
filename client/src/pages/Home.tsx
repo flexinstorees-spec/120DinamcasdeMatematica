@@ -745,9 +745,9 @@ export default function Home() {
               
               <Button 
                 asChild
-                className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+                className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-[13px] sm:text-base md:text-lg h-14 sm:h-16 rounded-xl shadow-md transition-all flex items-center justify-center px-2"
               >
-                <a href="https://pay.wiapy.com/5UYb0Ch6b" target="_blank" rel="noopener noreferrer">
+                <a href="https://pay.wiapy.com/5UYb0Ch6b" target="_blank" rel="noopener noreferrer" className="text-center w-full">
                   QUERO A OFERTA COMPLETA POR R$ 5,90
                 </a>
               </Button>
