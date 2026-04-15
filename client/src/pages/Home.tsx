@@ -445,7 +445,7 @@ export default function Home() {
               <img 
                 src={basicOfferLogo}
                 alt="Logo 120 Dinâmicas de Matemática" 
-                className="mx-auto w-full max-w-[280px] h-auto object-contain drop-shadow-md"
+                className="mx-auto w-full max-w-[280px] h-auto object-contain"
               />
             </div>
 
