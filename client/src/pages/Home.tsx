@@ -436,9 +436,9 @@ export default function Home() {
         {/* Pricing Card */}
         <section id="pricing-section" className="py-8 space-y-8">
           {/* Main Offer Card - 10,00 */}
-          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden transform scale-105 z-10">
-            <div className="absolute top-4 right-4 bg-brand-red text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider z-10 animate-bounce shadow-md">
-              82% OFF
+          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden transform scale-105 z-10 mt-12">
+            <div className="absolute top-4 right-4 bg-brand-green text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider z-10 animate-bounce shadow-md">
+              MAIS VENDIDO
             </div>
             <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
             <div className="text-center mb-2 mt-2">
@@ -450,90 +450,27 @@ export default function Home() {
             </div>
 
             <h3 className="text-2xl font-black text-center mb-4 text-gray-900 leading-tight" data-testid="text-offer-title-main">
-              OFERTA BÁSICA:
-            </h3>
-
-            <div className="text-center mb-6">
-              <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-main">De R$ 57,00 por apenas:</p>
-              <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 57,00</p>
-              <p className="text-6xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-main">R$ 10,00</p>
-            </div>
-
-            <p className="text-center text-sm font-semibold text-gray-700 mb-6" data-testid="text-offer-access-intro-main">
-              Você recebe acesso apenas a:
-            </p>
-
-            <div className="space-y-4 mb-8">
-              {[
-                "+120 Dinâmicas de Matemática",
-                "Garantia de 7 Dias",
-                "Acesso Imediato após a compra"
-              ].map((benefit, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="bg-brand-green rounded-full p-1.5 shrink-0 mt-0.5">
-                    <CheckCircle2 className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="font-bold text-base text-left tracking-tight text-gray-900 leading-tight">{benefit}</span>
-                </div>
-              ))}
-              
-              <div className="flex items-start gap-3 opacity-40">
-                <div className="bg-gray-200 rounded-full p-1 shrink-0 mt-0.5">
-                  <X className="w-4 h-4 text-gray-500" />
-                </div>
-                <span className="font-medium text-sm text-left text-gray-500 line-through">Sem os 5 Bônus Exclusivos</span>
-              </div>
-            </div>
-
-            <Button 
-              onClick={(e) => {
-                e.preventDefault();
-                setDiscountPopupType("upsell");
-              }}
-              className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center gap-2"
-            >
-              <span data-testid="button-buy-now-main">
-                QUERO A OFERTA BÁSICA
-              </span>
-            </Button>
-          </div>
-
-          {/* Premium Offer Card - 27,00 */}
-          <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl max-w-sm mx-auto relative overflow-hidden transform scale-105 z-10 mt-12">
-            <div className="absolute top-4 right-4 bg-brand-green text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider z-10 animate-bounce shadow-md">
-              MAIS VENDIDO
-            </div>
-            <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
-            <div className="text-center mb-2 mt-2">
-              <img 
-                src={newOfferLogo}
-                alt="Logo 120 Dinâmicas de Matemática + Bônus" 
-                className="mx-auto w-full max-w-[280px] h-auto object-contain drop-shadow-md"
-              />
-            </div>
-
-            <h3 className="text-2xl font-black text-center mb-4 text-gray-900 leading-tight">
               OFERTA COMPLETA VIP:
             </h3>
 
             <div className="text-center mb-6">
-              <p className="text-gray-500 text-sm">De R$ 97,00 por apenas:</p>
+              <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-main">De R$ 97,00 por apenas:</p>
               <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 97,00</p>
-              <p className="text-6xl font-black text-brand-green mt-2 tracking-tighter">R$ 27,00</p>
+              <p className="text-6xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-main">R$ 10,00</p>
             </div>
 
-            <p className="text-center text-sm font-semibold text-gray-700 mb-6">
+            <p className="text-center text-sm font-semibold text-gray-700 mb-6" data-testid="text-offer-access-intro-main">
               Você recebe acesso imediato a:
             </p>
 
             <div className="space-y-4 mb-8">
               {[
                 "+120 Dinâmicas de Matemática (Prontas para Aplicar)",
-                "Certificados de Conclusão para os Alunos",
-                "Sistema de Recompensas para Sala de Aula",
-                "Músicas Matemáticas para Aprender Brincando",
-                "Super Bingo Matemático para Sala de Aula",
-                "Desafio das Cartas Matemáticas",
+                "Bônus 1: Certificados de Conclusão",
+                "Bônus 2: Sistema de Recompensas",
+                "Bônus 3: Músicas Matemáticas",
+                "Bônus 4: Super Bingo Matemático",
+                "Bônus 5: Desafio Uno Matemático",
                 "Suporte VIP 24/7",
                 "Garantia de 7 Dias",
                 "Acesso Imediato após a compra"
@@ -551,8 +488,8 @@ export default function Home() {
               asChild
               className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
             >
-              <a href="https://pay.wiapy.com/ba24ICov6z" target="_blank" rel="noopener noreferrer">
-                QUERO A OFERTA VIP COMPLETA
+              <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer">
+                QUERO A OFERTA COMPLETA POR R$ 10,00
               </a>
             </Button>
           </div>
@@ -729,11 +666,11 @@ export default function Home() {
               </h3>
               
               <p className="text-gray-600 text-sm">
-                Ao invés de pagar R$ 27,00 pela oferta completa, leve TUDO agora por apenas:
+                Ao invés de pagar R$ 97,00 pela oferta completa, leve TUDO agora por apenas:
               </p>
               
               <div className="py-4">
-                <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 27,00</p>
+                <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 97,00</p>
                 <p className="text-6xl font-black text-brand-green tracking-tighter">
                   {discountPopupType === "exit" ? "R$ 5,90" : "R$ 17,00"}
                 </p>
