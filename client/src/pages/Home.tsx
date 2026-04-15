@@ -449,11 +449,7 @@ export default function Home() {
               />
             </div>
 
-            <h3 className="text-2xl font-black text-center mb-4 text-gray-900 leading-tight" data-testid="text-offer-title-main">
-              OFERTA COMPLETA VIP:
-            </h3>
-
-            <div className="text-center mb-6">
+            <div className="text-center mb-6 mt-4">
               <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-main">De R$ 97,00 por apenas:</p>
               <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 97,00</p>
               <p className="text-6xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-main">R$ 10,00</p>
@@ -489,7 +485,7 @@ export default function Home() {
               className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
             >
               <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer">
-                QUERO A OFERTA COMPLETA POR R$ 10,00
+                QUERO COMPRAR AGORA
               </a>
             </Button>
           </div>
