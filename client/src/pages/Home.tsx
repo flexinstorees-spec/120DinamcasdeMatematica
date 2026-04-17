@@ -500,7 +500,7 @@ export default function Home() {
               <div className="text-center mb-6 mt-4">
                 <p className="text-gray-500 text-sm" data-testid="text-offer-price-label-main">De R$ 97,00 por apenas:</p>
                 <p className="text-gray-400 text-lg line-through decoration-red-500 decoration-2">R$ 97,00</p>
-                <p className="text-6xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-main">R$ 10,00</p>
+                <p className="text-6xl font-black text-brand-green mt-2 tracking-tighter" data-testid="text-offer-price-main">R$ 17,00</p>
               </div>
 
               <p className="text-center text-sm font-semibold text-gray-700 mb-6" data-testid="text-offer-access-intro-main">
