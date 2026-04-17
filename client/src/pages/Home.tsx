@@ -439,8 +439,8 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto px-4 mt-12">
             
             {/* Second Offer Card - 20 dynamics, no bonus, R$ 10,00 */}
-            <div className="bg-white rounded-3xl border-2 border-brand-green p-6 shadow-xl relative overflow-hidden flex flex-col w-full max-w-sm mx-auto">
-              <div className="absolute top-0 inset-x-0 h-2 bg-brand-green"></div>
+            <div className="bg-white rounded-3xl border border-gray-100 p-6 shadow-sm relative overflow-hidden flex flex-col w-full max-w-sm mx-auto">
+              <div className="absolute top-0 inset-x-0 h-2 bg-brand-green/20"></div>
               <div className="text-center mb-2 mt-2">
                 <img 
                   src={secondOfferLogo}
