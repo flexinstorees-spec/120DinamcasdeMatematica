@@ -533,7 +533,7 @@ export default function Home() {
                 asChild
                 className="w-full bg-brand-green hover:bg-brand-green-hover text-white font-bold text-lg py-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 mt-auto"
               >
-                <a href="https://pay.wiapy.com/iK5ZWZeMKD" target="_blank" rel="noopener noreferrer">
+                <a href="https://pay.wiapy.com/O-PAtPXvk" target="_blank" rel="noopener noreferrer">
                   QUERO COMPRAR AGORA
                 </a>
               </Button>
