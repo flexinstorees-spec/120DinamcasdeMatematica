@@ -50,7 +50,7 @@ import dynamicsImage10 from "@assets/8_1775867563170.png";
 import dynamicsImage11 from "@assets/9_1775867563170.png";
 import newOfferLogo from "@assets/5439FBF1-6AB6-45E4-994B-9B630889449C_1775774888310.png";
 import basicOfferLogo from "@assets/image_1776184585306.png";
-import secondOfferLogo from "@assets/8d155e2d-9f1e-4dac-a198-81631786e4e3_1776466741730.png";
+import secondOfferLogo from "@assets/8C625A98-480D-43DF-9A7F-06469F1C87E5_1776506829718.jpeg";
 import apostilaImage from "@assets/da_1776121698891.png";
 
 export default function Home() {
@@ -438,13 +438,13 @@ export default function Home() {
         <section id="pricing-section" className="py-8 space-y-8">
           <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto px-4 mt-12">
             
-            {/* Second Offer Card - 20 dynamics, no bonus, R$ 10,00 */}
+            {/* Second Offer Card - 10 dynamics, no bonus, R$ 10,00 */}
             <div className="bg-white rounded-3xl border border-gray-100 p-6 shadow-sm relative overflow-hidden flex flex-col w-full max-w-sm mx-auto">
               <div className="absolute top-0 inset-x-0 h-2 bg-brand-green/20"></div>
               <div className="text-center mb-2 mt-2">
                 <img 
                   src={secondOfferLogo}
-                  alt="Logo 20 Dinâmicas de Matemática" 
+                  alt="Logo 10 Dinâmicas de Matemática" 
                   className="mx-auto w-full max-w-[280px] h-auto object-contain"
                 />
               </div>
@@ -460,7 +460,7 @@ export default function Home() {
 
               <div className="space-y-4 mb-8 flex-grow">
                 {[
-                  "20 Dinâmicas de Matemática (Prontas para Aplicar)",
+                  "10 Dinâmicas de Matemática (Prontas para Aplicar)",
                   "Suporte VIP 24/7",
                   "Garantia de 7 Dias",
                   "Acesso Imediato após a compra"
